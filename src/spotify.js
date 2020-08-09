@@ -1,6 +1,6 @@
-export const authEndpoint = "https://accounts.spotify.com/authorize"
+import { clientID } from "../variables"
 
-const clientID = "3592cd3a21bc406e8e6686476a3596b1"
+export const authEndpoint = "https://accounts.spotify.com/authorize"
 
 const redirectUri = "http://localhost:3000/"
 
