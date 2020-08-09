@@ -4,7 +4,7 @@
 	overflow-y: overlay;
 	color: white;
 	padding: 16px 30px 30px 30px;
-	background: linear-gradient(rgb(91, 87, 115), rgb(0, 0, 0));
+	background: linear-gradient(#8f3841, #000);
 }
 
 .bodyInfo {
