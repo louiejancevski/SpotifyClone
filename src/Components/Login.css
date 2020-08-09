@@ -1,0 +1,22 @@
+.login {
+	display: grid;
+	place-items: center;
+	height: 100vh;
+	background: #000;
+	background-image: linear-gradient(#2c5e92 0%, #552f6d 80%);
+}
+
+.login .LoginLogo {
+	width: 50%;
+	color: #fff;
+}
+
+.login a {
+	font-size: 15px;
+	padding: 15px;
+	border-radius: 99px;
+	background-color: #ffffff;
+	color: #54306e;
+	font-weight: 600;
+	text-decoration: none;
+}
