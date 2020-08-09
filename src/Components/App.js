@@ -1,7 +1,7 @@
 import React, { useEffect } from "react"
 import "./App.css"
 import Login from "./Login"
-import { getTokenFromURL } from "../spotify"
+import { getTokenFromURL } from "../Config/spotify"
 import SpotifyWebApi from "spotify-web-api-js"
 import Player from "./Player"
 import { useDataLayerValue } from "../DataLayer"
@@ -38,7 +38,6 @@ function App() {
 					top_artists: response,
 				})
 			)
-
 
 			dispatch({
 				type: "SET_SPOTIFY",
