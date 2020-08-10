@@ -23,8 +23,15 @@ After clicking the 'Login with Spotify' button, you will be taken to actual Spot
 
 ![Spotify Auth](https://github.com/louiejancevski/SpotifyClone/blob/master/src/Images/spotify-auth.png)
 
-![Web Player](https://github.com/louiejancevski/SpotifyClone/blob/master/src/Images/player-demo.png)
+These permissions are to view:
+- Content you have recently played
+- The content you are playing
+- The content you are playing and Spotify Connect devices information
+- Your top artists and content
 
+And also your name and username, your profile picture, how many followers you have on Spotify and your public playlists
+
+![Web Player](https://github.com/louiejancevski/SpotifyClone/blob/master/src/Images/player-demo.png)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
