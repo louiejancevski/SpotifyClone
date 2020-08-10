@@ -1,4 +1,17 @@
-## Spotify Clone 
+## Spotify Clone
+- Built using ReactJS and the Spotify API.
+- Version 1.0
+
+## URL / Live version
+To use the live demo of this app, visit:
+-  https://louiejancevski.github.io/SpotifyClone/
+
+## About this project
+This project is a ReactJS clone of the Spotify web player.
+
+The main idea is to have users be authenticated through Spotify, and then display them some basic information about their own account.
+
+Users can play their own music and control their other connected devices, to play, pause, or skip songs. 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
