@@ -40,6 +40,30 @@
 	}
 }
 
+@media (max-width: 890px) {
+	.bodyInfoText h2 {
+		font-size: 55px !important;
+	}
+}
+
+@media (max-width: 823px) {
+	.bodyInfoText h2 {
+		font-size: 45px !important;
+	}
+}
+
+@media (max-width: 730px) {
+	.bodyInfoText h2 {
+		font-size: 32px !important;
+	}
+}
+
+@media (max-width: 787px) {
+	.bodySongs {
+		margin: 20px -500px 10px -30px;
+	}
+}
+
 .bodyInfoText p {
 	font-size: 13px;
 	color: hsla(0, 0%, 100%, 0.7);
