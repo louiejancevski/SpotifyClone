@@ -41,9 +41,23 @@ This app also never saves your information at no point.
 
 Now...
 
-After you have logged into Spotify and gave the right access, you will finally be presented with the web player.
+After you have logged into Spotify and gave the right access, you will finally be presented with the web player:
 
 ![Web Player](https://github.com/louiejancevski/SpotifyClone/blob/master/src/Images/player-demo.png)
+
+At first, this web player will be completely nonfunctional, and will serve no other purpose than visual.
+
+In order to make it control your other actual devices and be able to play, pause, or skip songs, you would have to first open an actual connected device, and play any song.
+
+Then after that, this clone will be able to work correctly, since it will have an 'active device' as the target, as specified in Spotify's API.
+
+You can read more about it here: 
+
+https://developer.spotify.com/documentation/web-api/reference/player/pause-a-users-playback/
+
+But, essentially, in order to use most of Spotify's API endpoints, a query parameter 'device_id' should be passed, or else, if not supplied, the user’s currently active device is the target.
+
+Which is what we do by opening Spotify in another device. 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
