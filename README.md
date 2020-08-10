@@ -32,8 +32,7 @@ These permissions are to view:
 Aside from those permissions, the app will also see your name and username, your profile picture, how many followers you have on Spotify and your public playlists.
 
 You can unauthorized this anytime, by going to your Spotify account settings:
-
-- https://www.spotify.com/us/account/apps/
+- [spotify.com/us/account/apps/](https://www.spotify.com/us/account/apps/)
 
 And clicking 'Remove Access' from 'SpotifyClone'.
 
