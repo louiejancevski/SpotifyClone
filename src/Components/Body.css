@@ -40,15 +40,21 @@
 	}
 }
 
+@media (max-width: 930px) {
+	.bodyInfoText h2 {
+		font-size: 56px !important;
+	}
+}
+
 @media (max-width: 890px) {
 	.bodyInfoText h2 {
-		font-size: 55px !important;
+		font-size: 47px !important;
 	}
 }
 
 @media (max-width: 823px) {
 	.bodyInfoText h2 {
-		font-size: 45px !important;
+		font-size: 36px !important;
 	}
 }
 
@@ -60,7 +66,7 @@
 
 @media (max-width: 787px) {
 	.bodySongs {
-		margin: 20px -500px 10px -30px;
+		margin: 20px -500px 10px -30px !important;
 	}
 }
 
