@@ -59,6 +59,11 @@ But, essentially, in order to use most of Spotify's API endpoints, a query param
 
 Which is what we do by opening Spotify in another device. 
 
+## Used:
+- [ReactJS](https://reactjs.org/docs/create-a-new-react-app.html)
+- [Spotify API](https://developer.spotify.com/documentation/web-api/)
+- [Material UI](https://material-ui.com/)
+
 ## Available Scripts
 
 In the project directory, you can run:
