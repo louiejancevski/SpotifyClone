@@ -13,7 +13,13 @@ The main idea is to have users be authenticated through Spotify, and then displa
 
 Users can play their own music and control their other connected devices, to play, pause, or skip songs. 
 
+## Taking a look inside
+
+When you first go to app, you get presented with a login page in which you are required to login with your Spotify account in order to proceed to see the web player clone. 
+
 ![Login Page](https://github.com/louiejancevski/SpotifyClone/blob/master/src/Images/spotify-login.png)
+
+After clicking the 'Login with Spotify' button, you will be taken to actual Spotify website where you will authorize this app to see and do things for you. 
 
 ![Spotify Auth](https://github.com/louiejancevski/SpotifyClone/blob/master/src/Images/spotify-auth.png)
 
