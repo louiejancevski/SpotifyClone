@@ -21,13 +21,13 @@ When you first go to app, you get presented with a login page in which you are r
 
 After clicking the 'Login with Spotify' button, you will be taken to actual Spotify website where you will authorize this app to see and do things for you. 
 
-![Spotify Auth](https://github.com/louiejancevski/SpotifyClone/blob/master/src/Images/spotify-auth.png)
-
 These permissions are to view:
 - Content you have recently played
 - The content you are playing
 - The content you are playing and Spotify Connect devices information
 - Your top artists and content
+
+![Spotify Auth](https://github.com/louiejancevski/SpotifyClone/blob/master/src/Images/spotify-auth.png)
 
 And also your name and username, your profile picture, how many followers you have on Spotify and your public playlists
 
