@@ -13,7 +13,9 @@ The main idea is to have users be authenticated through Spotify, and then displa
 
 Users can play their own music and control their other connected devices, to play, pause, or skip songs. 
 
-![alt text](https://github.com/louiejancevski/SpotifyClone/blob/master/src/Images/player-demo.png)
+![Login Page](https://github.com/louiejancevski/SpotifyClone/blob/master/src/Images/spotify-login.png)
+
+![Web Player](https://github.com/louiejancevski/SpotifyClone/blob/master/src/Images/player-demo.png)
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
