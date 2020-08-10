@@ -34,6 +34,12 @@
 	font-size: 84px;
 }
 
+@media (max-width: 620px) {
+	.bodyInfoText h2 {
+		font-size: 60px !important;
+	}
+}
+
 .bodyInfoText p {
 	font-size: 13px;
 	color: hsla(0, 0%, 100%, 0.7);
