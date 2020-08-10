@@ -4,7 +4,7 @@
 
 ## URL / Live version
 To use the live demo of this app:
--  https://louiejancevski.github.io/SpotifyClone/
+- [Go here](https://louiejancevski.github.io/SpotifyClone/)
 
 ## About this project
 This project is a ReactJS clone of the Spotify web player.
