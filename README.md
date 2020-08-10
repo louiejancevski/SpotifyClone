@@ -19,14 +19,50 @@ When you first go to app, you get presented with a login page in which you are r
 
 ![Login Page](https://github.com/louiejancevski/SpotifyClone/blob/master/src/Images/spotify-login.png)
 
-After clicking the 'Login with Spotify' button, you will be taken to actual Spotify website where you will authorize this app to see and do things for you. 
+After clicking the 'Login with Spotify' button, you will be taken to the actual Spotify website where you will be asked to authorize this app to see and do things for you. 
+
+These permissions are to view:
+- Content you have recently played
+- The content you are playing
+- The content you are playing and Spotify Connect devices information
+- Your top artists and content
 
 ![Spotify Auth](https://github.com/louiejancevski/SpotifyClone/blob/master/src/Images/spotify-auth.png)
 
+Aside from those permissions, the app will also see your name and username, your profile picture, how many followers you have on Spotify and your public playlists.
+
+You can unauthorized this anytime, by going to your Spotify account settings:
+
+- https://www.spotify.com/us/account/apps/
+
+And clicking 'Remove Access' from 'SpotifyClone'.
+
+This app also never saves your information at no point.
+
+Now...
+
+After you have logged into Spotify and gave the right access, you will finally be presented with the web player:
+
 ![Web Player](https://github.com/louiejancevski/SpotifyClone/blob/master/src/Images/player-demo.png)
 
+At first, this web player will be completely nonfunctional, and will serve no other purpose than visual.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+In order to make it control your other actual devices and be able to play, pause, or skip songs, you would have to first open an actual connected device, and play any song.
+
+Then after that, this clone will be able to work correctly, since it will have an 'active device' as the target, as specified in Spotify's API.
+
+You can read more about it here: 
+
+https://developer.spotify.com/documentation/web-api/reference/player/pause-a-users-playback/
+
+But, essentially, in order to use most of Spotify's API endpoints, a query parameter 'device_id' should be passed, or else, if not supplied, the user’s currently active device is the target.
+
+Which is what we do by opening Spotify in another device. 
+
+## Used:
+- [ReactJS](https://reactjs.org/docs/create-a-new-react-app.html)
+- [Spotify API](https://developer.spotify.com/documentation/web-api/)
+- [Material UI](https://material-ui.com/)
 
 ## Available Scripts
 
@@ -56,6 +92,8 @@ Your app is ready to be deployed!
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
 ## Learn More
+
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
