@@ -34,9 +34,9 @@
 	font-size: 84px;
 }
 
-@media (max-width: 620px) {
+@media (max-width: 1023px) {
 	.bodyInfoText h2 {
-		font-size: 60px !important;
+		font-size: 67px !important;
 	}
 }
 
