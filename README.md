@@ -29,15 +29,19 @@ These permissions are to view:
 
 ![Spotify Auth](https://github.com/louiejancevski/SpotifyClone/blob/master/src/Images/spotify-auth.png)
 
-And also your name and username, your profile picture, how many followers you have on Spotify and your public playlists.
+Aside from those permissions, the app will also see your name and username, your profile picture, how many followers you have on Spotify and your public playlists.
 
-You can unauthorized this anytime after, by going to your Spotify account settings:
+You can unauthorized this anytime, by going to your Spotify account settings:
 
 - https://www.spotify.com/us/account/apps/
 
-And clicking remove access.
+And clicking 'Remove Access' from 'SpotifyClone'.
 
 This app also never saves your information at no point.
+
+Now...
+
+After you have logged into Spotify and gave the right access, you will finally be presented with the web player.
 
 ![Web Player](https://github.com/louiejancevski/SpotifyClone/blob/master/src/Images/player-demo.png)
 
