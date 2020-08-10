@@ -3,7 +3,7 @@
 - Version 1.0
 
 ## URL / Live version
-To use the live demo of this app, visit:
+To use the live demo of this app:
 -  https://louiejancevski.github.io/SpotifyClone/
 
 ## About this project
