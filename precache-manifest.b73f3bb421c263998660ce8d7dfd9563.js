@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "6a4e87aaaaf6dade822fc8fff36f9404",
+    "revision": "07fc1935fff22c527395766bd482391a",
     "url": "/SpotifyClone/index.html"
   },
   {
