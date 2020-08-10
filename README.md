@@ -19,7 +19,7 @@ When you first go to app, you get presented with a login page in which you are r
 
 ![Login Page](https://github.com/louiejancevski/SpotifyClone/blob/master/src/Images/spotify-login.png)
 
-After clicking the 'Login with Spotify' button, you will be taken to actual Spotify website where you will authorize this app to see and do things for you. 
+After clicking the 'Login with Spotify' button, you will be taken to the actual Spotify website where you will be asked to authorize this app to see and do things for you. 
 
 These permissions are to view:
 - Content you have recently played
