@@ -50,18 +50,17 @@ After you have logged into Spotify and gave the right access, you will finally b
 
 ![Web Player](https://github.com/louiejancevski/SpotifyClone/blob/master/src/Images/player-demo.png)
 
-In version 1.0, you weren't able to do anything at all, and it served no other purpose than visual.
+In previous versions, you weren't able to do anything at all, and it served no other purpose than visual.
 
-But now, I've made it more functional and dynamic.
+I've made it more functional and dynamic now.
 
-You can now access any of your playlists and play any of your songs for a max of 30 seconds. 
+You can access any of your playlists and play any of your songs for a max of 30 seconds, change the volume and mute any song, and also skip to the next or previous track. 
 
-You will also be able to change the volume and mute controls, and can also skip to the next or previous track. 
-
-For each song that you play, the `document.title` will also get updated.
+For each song that is being played, the `document.title` will also get dynamically changed accordingly.
 
 ![Document title](https://github.com/louiejancevski/SpotifyClone/blob/master/src/Images/document-title.png)
 
+**Note:** I added a static version as well for people that just want to get a quick glance at the app.
 
 ## Used:
 - [ReactJS](https://reactjs.org/docs/create-a-new-react-app.html)
