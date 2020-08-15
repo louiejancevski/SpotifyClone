@@ -1,6 +1,6 @@
 ## Spotify Clone
 - Built using ReactJS and the Spotify API.
-- Version 1.0
+- Version 2.0
 
 ## URL / Live version
 To use the live demo of this app:
@@ -11,7 +11,11 @@ This project is a ReactJS clone of the Spotify web player.
 
 The main idea is to have users be authenticated through Spotify, and then display them some basic information about their own account.
 
-Users can play their own music and control their other connected devices, to play, pause, or skip songs. 
+Users are able to: 
+- Play or pause a song
+- Skip to the next or previous track
+- Control the volume
+- And also entirely mute the audio
 
 ## Taking a look inside
 
@@ -44,19 +48,18 @@ After you have logged into Spotify and gave the right access, you will finally b
 
 ![Web Player](https://github.com/louiejancevski/SpotifyClone/blob/master/src/Images/player-demo.png)
 
-At first, this web player will be completely nonfunctional, and will serve no other purpose than visual.
+In version 1.0, you weren't able to do anything at all, and it served no other purpose than visual.
 
-In order to make it control your other actual devices and be able to play, pause, or skip songs, you would have to first open an actual connected device, and play any song.
+But now, I've made it more functional and dynamic.
 
-Then after that, this clone will be able to work correctly, since it will have an 'active device' as the target, as specified in Spotify's API.
+You can now access any of your playlists and play any of your songs for a max of 30 seconds. 
 
-You can read more about it here: 
+You will also be able to change the volume and mute controls, and can also skip to the next or previous track. 
 
-https://developer.spotify.com/documentation/web-api/reference/player/pause-a-users-playback/
+For each song that you play, the `document.title` will also get updated.
 
-But, essentially, in order to use most of Spotify's API endpoints, a query parameter 'device_id' should be passed, or else, if not supplied, the user’s currently active device is the target.
+![Document title](https://github.com/louiejancevski/SpotifyClone/blob/master/src/Images/document-title.png)
 
-Which is what we do by opening Spotify in another device. 
 
 ## Used:
 - [ReactJS](https://reactjs.org/docs/create-a-new-react-app.html)
