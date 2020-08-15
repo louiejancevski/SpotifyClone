@@ -4,14 +4,13 @@ import './index.css'
 import App from './Components/App'
 import { DataLayer } from './DataLayer'
 import { AudioLayer } from './AudioLayer'
-
 import reducer, { initialState } from './reducer'
-import soundReducer, { soundInitialState } from './soundReducer'
+import audioReducer, { soundInitialState } from './audioReducer'
 
 ReactDOM.render(
 	<React.StrictMode>
 		<DataLayer initialState={initialState} reducer={reducer}>
-			<AudioLayer initialState={soundInitialState} reducer={soundReducer}>
+			<AudioLayer initialState={soundInitialState} reducer={audioReducer}>
 				<App />
 			</AudioLayer>
 		</DataLayer>
