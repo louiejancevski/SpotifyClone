@@ -1,5 +1,7 @@
 ## Spotify Clone
 - Built using ReactJS and the Spotify API.
+- User authentication.
+- Audio controls 
 - Version 2.0
 
 ## URL / Live version
