@@ -10,7 +10,7 @@ import PlaylistPlayIcon from '@material-ui/icons/PlaylistPlay'
 import VolumeUpIcon from '@material-ui/icons/VolumeUp'
 import VolumeOffIcon from '@material-ui/icons/VolumeOff'
 import { useDataLayerValue } from '../../../DataLayer'
-import { useSoundLayerValue } from '../../../SoundLayer'
+import { useAudioLayerValue } from '../../../AudioLayer'
 import PauseCircleOutlineIcon from '@material-ui/icons/PauseCircleOutline'
 import NoSong from '../../../Images/nosong.png'
 
@@ -18,11 +18,11 @@ function Footer({ spotify }) {
 	const [{ track, currentPlaylist }, dispatch] = useDataLayerValue()
 	const [
 		{ audio, volume, playing, beforeMute, positionInPlaylist },
-		soundDispatch,
-	] = useSoundLayerValue()
+		audioDispatch,
+	] = useAudioLayerValue()
 
 	const handleVolumeChange = (value) => {
-		soundDispatch({
+		audioDispatch({
 			type: 'SET_VOLUME',
 			volume: value / 100,
 		})
@@ -30,16 +30,16 @@ function Footer({ spotify }) {
 
 	const handleMute = () => {
 		if (volume > 0) {
-			soundDispatch({
+			audioDispatch({
 				type: 'SET_BEFORE_MUTE',
 				beforeMute: volume,
 			})
-			soundDispatch({
+			audioDispatch({
 				type: 'SET_VOLUME',
 				volume: 0,
 			})
 		} else {
-			soundDispatch({
+			audioDispatch({
 				type: 'SET_VOLUME',
 				volume: beforeMute,
 			})
@@ -48,12 +48,12 @@ function Footer({ spotify }) {
 
 	const handlePlayPause = () => {
 		if (playing) {
-			soundDispatch({
+			audioDispatch({
 				type: 'SET_PLAYING',
 				playing: false,
 			})
 		} else {
-			soundDispatch({
+			audioDispatch({
 				type: 'SET_PLAYING',
 				playing: true,
 			})
@@ -65,7 +65,7 @@ function Footer({ spotify }) {
 			currentPlaylist?.tracks.items[positionInPlaylist - 1].track.preview_url
 		)
 
-		soundDispatch({
+		audioDispatch({
 			type: 'SET_PLAYING',
 			playing: false,
 		})
@@ -75,17 +75,17 @@ function Footer({ spotify }) {
 			track: currentPlaylist.tracks.items[positionInPlaylist - 1].track,
 		})
 
-		soundDispatch({
+		audioDispatch({
 			type: 'SET_POSITION_IN_PLAYLIST',
 			positionInPlaylist: positionInPlaylist - 1,
 		})
 
-		soundDispatch({
+		audioDispatch({
 			type: 'SET_AUDIO',
 			audio: audio,
 		})
 
-		soundDispatch({
+		audioDispatch({
 			type: 'SET_PLAYING',
 			playing: true,
 		})
@@ -100,7 +100,7 @@ function Footer({ spotify }) {
 			currentPlaylist.tracks.items[positionInPlaylist + 1].track.preview_url
 		)
 
-		soundDispatch({
+		audioDispatch({
 			type: 'SET_PLAYING',
 			playing: false,
 		})
@@ -110,16 +110,17 @@ function Footer({ spotify }) {
 			track: currentPlaylist.tracks.items[positionInPlaylist + 1].track,
 		})
 
-		soundDispatch({
+		audioDispatch({
 			type: 'SET_POSITION_IN_PLAYLIST',
 			positionInPlaylist: positionInPlaylist + 1,
 		})
-		soundDispatch({
+
+		audioDispatch({
 			type: 'SET_AUDIO',
 			audio: audio,
 		})
 
-		soundDispatch({
+		audioDispatch({
 			type: 'SET_PLAYING',
 			playing: true,
 		})

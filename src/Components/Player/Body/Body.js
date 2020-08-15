@@ -2,7 +2,7 @@ import React from 'react'
 import './Body.css'
 import Header from './Partials/Header'
 import { useDataLayerValue } from '../../../DataLayer'
-import { useSoundLayerValue } from '../../../SoundLayer'
+import { useAudioLayerValue } from '../../../AudioLayer'
 import PlayCircleFilledIcon from '@material-ui/icons/PlayCircleFilled'
 import FavoriteIcon from '@material-ui/icons/Favorite'
 import MoreHorizIcon from '@material-ui/icons/MoreHoriz'
@@ -14,13 +14,13 @@ function Body({ spotify }) {
 	const [{ track, currentPlaylist }, dispatch] = useDataLayerValue()
 	const [
 		{ audio, playing, positionInPlaylist },
-		soundDispatch,
-	] = useSoundLayerValue()
+		audioDispatch,
+	] = useAudioLayerValue()
 
 	const playPlaylist = () => {
 		let audio = new Audio(currentPlaylist?.tracks.items[0].track.preview_url)
 
-		soundDispatch({
+		audioDispatch({
 			type: 'SET_PLAYING',
 			playing: false,
 		})
@@ -30,17 +30,17 @@ function Body({ spotify }) {
 			track: currentPlaylist?.tracks.items[0].track,
 		})
 
-		soundDispatch({
+		audioDispatch({
 			type: 'SET_POSITION_IN_PLAYLIST',
 			positionInPlaylist: 0,
 		})
 
-		soundDispatch({
+		audioDispatch({
 			type: 'SET_AUDIO',
 			audio: audio,
 		})
 
-		soundDispatch({
+		audioDispatch({
 			type: 'SET_PLAYING',
 			playing: true,
 		})

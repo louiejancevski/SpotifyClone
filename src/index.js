@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom'
 import './index.css'
 import App from './Components/App'
 import { DataLayer } from './DataLayer'
-import { SoundLayer } from './SoundLayer'
+import { AudioLayer } from './AudioLayer'
 
 import reducer, { initialState } from './reducer'
 import soundReducer, { soundInitialState } from './soundReducer'
@@ -11,9 +11,9 @@ import soundReducer, { soundInitialState } from './soundReducer'
 ReactDOM.render(
 	<React.StrictMode>
 		<DataLayer initialState={initialState} reducer={reducer}>
-			<SoundLayer initialState={soundInitialState} reducer={soundReducer}>
+			<AudioLayer initialState={soundInitialState} reducer={soundReducer}>
 				<App />
-			</SoundLayer>
+			</AudioLayer>
 		</DataLayer>
 	</React.StrictMode>,
 	document.getElementById('root')

@@ -1,18 +1,19 @@
 import React from 'react'
 import './SongRow.css'
 import { useDataLayerValue } from '../../../../DataLayer'
-import { useSoundLayerValue } from '../../../../SoundLayer'
+import { useAudioLayerValue } from '../../../../AudioLayer'
 
 function SongRow({ track, position }) {
 	const [{ currentPlaylist }, dispatch] = useDataLayerValue()
-	const [{ playing, volume, repeat }, soundDispatch] = useSoundLayerValue()
+	const [{ playing, volume, repeat }, audioDispatch] = useAudioLayerValue()
 
 	const changeTrack = (track) => {
 		let audio = new Audio(track.preview_url)
+
 		if (audio.src.includes('null')) {
 			alert(`It looks like this song is not available to be played! 😟`)
 		} else {
-			soundDispatch({
+			audioDispatch({
 				type: 'SET_PLAYING',
 				playing: false,
 			})
@@ -22,17 +23,17 @@ function SongRow({ track, position }) {
 				track: track,
 			})
 
-			soundDispatch({
+			audioDispatch({
 				type: 'SET_POSITION_IN_PLAYLIST',
 				positionInPlaylist: position,
 			})
 
-			soundDispatch({
+			audioDispatch({
 				type: 'SET_AUDIO',
 				audio: audio,
 			})
 
-			soundDispatch({
+			audioDispatch({
 				type: 'SET_PLAYING',
 				playing: true,
 			})
