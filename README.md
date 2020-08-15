@@ -2,7 +2,7 @@
 - Built using ReactJS and the Spotify API.
 - User authentication.
 - Audio controls 
-- Version 2.0
+- Version 3.0
 
 ## URL / Live version
 To use the live demo of this app:
