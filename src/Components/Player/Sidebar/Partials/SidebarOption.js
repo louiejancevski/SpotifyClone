@@ -3,7 +3,7 @@ import './SidebarOption.css'
 import { useDataLayerValue } from '../../../../DataLayer'
 
 function SidebarOption({ title, Icon, id }) {
-	const [{ spotify }, dispatch] = useDataLayerValue()
+	const [{ spotify, demo }, dispatch] = useDataLayerValue()
 
 	const changePlaylist = (id, e) => {
 		spotify.getPlaylist(id).then((response) => {
@@ -16,14 +16,23 @@ function SidebarOption({ title, Icon, id }) {
 	}
 
 	return (
-		<div className="sidebarOption">
-			{Icon && <Icon className="sidebarOptionIcon" />}
-			{Icon ? (
-				<h4>{title}</h4>
+		<>
+			{demo ? (
+				<div className="sidebarOption">
+					{Icon && <Icon className="sidebarOptionIcon" />}
+					{<p> {title}</p>}
+				</div>
 			) : (
-				<p onClick={(e) => changePlaylist(id, e)}> {title}</p>
+				<div className="sidebarOption">
+					{Icon && <Icon className="sidebarOptionIcon" />}
+					{Icon ? (
+						<h4>{title}</h4>
+					) : (
+						<p onClick={(e) => changePlaylist(id, e)}> {title}</p>
+					)}
+				</div>
 			)}
-		</div>
+		</>
 	)
 }
 

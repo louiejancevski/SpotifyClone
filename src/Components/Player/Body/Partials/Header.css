@@ -27,7 +27,7 @@
 
 input::-webkit-input-placeholder {
 	font-size: 12px;
-	letter-spacing: 1px;
+	letter-spacing: 0.8px;
 	font-weight: 500;
 	color: black;
 }

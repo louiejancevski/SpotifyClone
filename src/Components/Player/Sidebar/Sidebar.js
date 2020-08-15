@@ -7,27 +7,49 @@ import { ReactComponent as Home } from '../../../Icons/home.svg'
 import { ReactComponent as Search } from '../../../Icons/search.svg'
 import { ReactComponent as Library } from '../../../Icons/library.svg'
 
-function Sidebar() {
-	const [{ playlists }] = useDataLayerValue()
+function Sidebar(staticData) {
+	const [{ playlists, demo }] = useDataLayerValue()
 
 	return (
-		<div className="sidebar">
-			<Logo className="sidebarLogo" />
-			<SidebarOption Icon={Home} title="Home" />
-			<SidebarOption Icon={Search} title="Search" />
-			<SidebarOption Icon={Library} title="Your Library" />
-			<br />
-			<strong className="sidebarTitle">Playlists</strong>
-			<hr />
+		<>
+			{demo ? (
+				<div className="sidebar">
+					<Logo className="sidebarLogo" />
+					<SidebarOption Icon={Home} title="Home" />
+					<SidebarOption Icon={Search} title="Search" />
+					<SidebarOption Icon={Library} title="Your Library" />
+					<br />
+					<strong className="sidebarTitle">Playlists</strong>
+					<hr />
 
-			{playlists?.items?.map((playlist) => (
-				<SidebarOption
-					id={playlist.id}
-					key={playlist.id}
-					title={playlist.name}
-				/>
-			))}
-		</div>
+					{staticData.static.user_playlists.map((playlist) => (
+						<SidebarOption
+							id={playlist.id}
+							key={playlist.id}
+							title={playlist.name}
+						/>
+					))}
+				</div>
+			) : (
+				<div className="sidebar">
+					<Logo className="sidebarLogo" />
+					<SidebarOption Icon={Home} title="Home" />
+					<SidebarOption Icon={Search} title="Search" />
+					<SidebarOption Icon={Library} title="Your Library" />
+					<br />
+					<strong className="sidebarTitle">Playlists</strong>
+					<hr />
+
+					{playlists?.items?.map((playlist) => (
+						<SidebarOption
+							id={playlist.id}
+							key={playlist.id}
+							title={playlist.name}
+						/>
+					))}
+				</div>
+			)}
+		</>
 	)
 }
 

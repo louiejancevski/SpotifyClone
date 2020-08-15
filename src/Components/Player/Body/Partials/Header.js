@@ -6,7 +6,7 @@ import { Avatar } from '@material-ui/core'
 import { useDataLayerValue } from '../../../../DataLayer'
 
 function Header() {
-	const [{ user }] = useDataLayerValue()
+	const [{ user, demo }] = useDataLayerValue()
 
 	return (
 		<div className="header">
@@ -18,11 +18,19 @@ function Header() {
 				/>
 			</div>
 
-			<div className="headerRight">
-				<Avatar className="as" alt="" src={user?.images[0]?.url} />
-				<h4>{user?.display_name}</h4>
-				<ArrowDropDownIcon />
-			</div>
+			{demo ? (
+				<div className="headerRight">
+					<Avatar alt="User profile image" />
+					<h4>Louie</h4>
+					<ArrowDropDownIcon />
+				</div>
+			) : (
+				<div className="headerRight">
+					<Avatar alt="User profile image" src={user?.images[0]?.url} />
+					<h4>{user?.display_name}</h4>
+					<ArrowDropDownIcon />
+				</div>
+			)}
 		</div>
 	)
 }

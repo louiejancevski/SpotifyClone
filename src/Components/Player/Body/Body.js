@@ -7,15 +7,12 @@ import PlayCircleFilledIcon from '@material-ui/icons/PlayCircleFilled'
 import FavoriteIcon from '@material-ui/icons/Favorite'
 import MoreHorizIcon from '@material-ui/icons/MoreHoriz'
 import SongRow from './Partials/SongRow'
-import { playlist } from '../../../variables'
 import NoPlaylistImage from '../../../Images/noPlaylistImage.png'
+import DemoPlaylist from '../../../Images/Demo/demo-playlist.jpg'
 
-function Body({ spotify }) {
-	const [{ track, currentPlaylist }, dispatch] = useDataLayerValue()
-	const [
-		{ audio, playing, positionInPlaylist },
-		audioDispatch,
-	] = useAudioLayerValue()
+function Body({ spotify, staticData }) {
+	const [{ currentPlaylist, demo }, dispatch] = useDataLayerValue()
+	const [{}, audioDispatch] = useAudioLayerValue()
 
 	const playPlaylist = () => {
 		let audio = new Audio(currentPlaylist?.tracks.items[0].track.preview_url)
@@ -55,42 +52,76 @@ function Body({ spotify }) {
 	return (
 		<div className="body">
 			<Header spotify={spotify} />
-			<div className="bodyInfo">
-				<img
-					src={
-						currentPlaylist?.images[0]
-							? currentPlaylist.images[0].url
-							: NoPlaylistImage
-					}
-					alt=""
-				/>
-				<div className="bodyInfoText">
-					<p className="headerText">PLAYLIST</p>
-					<h2>{currentPlaylist?.name}</h2>
-					<p>{currentPlaylist?.description}</p>
-					<p>
-						<span className="owner">{currentPlaylist?.owner.display_name}</span>
-						<span className="songs">
-							{currentPlaylist?.tracks.total}{' '}
-							{currentPlaylist?.tracks.total > 1 ? 'songs' : 'song'}{' '}
-						</span>
-					</p>
-				</div>
-			</div>
+			{demo ? (
+				<div className="bodyInfo">
+					<img src={DemoPlaylist} alt="" />
 
-			<div className="bodySongs">
-				<div className="bodyIcons">
-					<PlayCircleFilledIcon
-						onClick={playPlaylist}
-						className="bodyShuffle"
-					/>
-					<FavoriteIcon fontSize="large" />
-					<MoreHorizIcon />
+					<div className="bodyInfoText">
+						<p className="headerText">PLAYLIST</p>
+						<h2>{staticData.name}</h2>
+						<p>{staticData.description}</p>
+						<p>
+							<span className="owner">{staticData.owner.display_name}</span>
+							<span className="songs">
+								{staticData.tracks.total}{' '}
+								{staticData.tracks.total > 1 ? 'songs' : 'song'}{' '}
+							</span>
+						</p>
+					</div>
 				</div>
-				{currentPlaylist?.tracks.items.map((item, index) => (
-					<SongRow key={item.track.id} position={index} track={item.track} />
-				))}
-			</div>
+			) : (
+				<div className="bodyInfo">
+					<img
+						src={
+							currentPlaylist?.images[0]
+								? currentPlaylist.images[0].url
+								: NoPlaylistImage
+						}
+						alt=""
+					/>
+					<div className="bodyInfoText">
+						<p className="headerText">PLAYLIST</p>
+						<h2>{currentPlaylist?.name}</h2>
+						<p>{currentPlaylist?.description}</p>
+						<p>
+							<span className="owner">
+								{currentPlaylist?.owner.display_name}
+							</span>
+							<span className="songs">
+								{currentPlaylist?.tracks.total}{' '}
+								{currentPlaylist?.tracks.total > 1 ? 'songs' : 'song'}{' '}
+							</span>
+						</p>
+					</div>
+				</div>
+			)}
+
+			{demo ? (
+				<div className="bodySongs">
+					<div className="bodyIcons">
+						<PlayCircleFilledIcon className="bodyShuffle" />
+						<FavoriteIcon fontSize="large" />
+						<MoreHorizIcon />
+					</div>
+					{staticData?.tracks.items.map((item, index) => (
+						<SongRow key={item.track.id} track={item.track} />
+					))}
+				</div>
+			) : (
+				<div className="bodySongs">
+					<div className="bodyIcons">
+						<PlayCircleFilledIcon
+							onClick={playPlaylist}
+							className="bodyShuffle"
+						/>
+						<FavoriteIcon fontSize="large" />
+						<MoreHorizIcon />
+					</div>
+					{currentPlaylist?.tracks.items.map((item, index) => (
+						<SongRow key={item.track.id} position={index} track={item.track} />
+					))}
+				</div>
+			)}
 		</div>
 	)
 }

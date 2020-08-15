@@ -1,0 +1,231 @@
+{
+  "user_playlists": [
+    {
+      "id": 1,
+      "name": "Classic Rock Songs"
+    },
+    {
+      "id": 2,
+      "name": "Rap Caviar"
+    },
+    {
+      "id": 3,
+      "name": "EDM Hits 2020"
+    },
+    {
+      "id": 4,
+      "name": "Hot Country"
+    },
+    {
+      "id": 5,
+      "name": "Peaceful Piano"
+    },
+    {
+      "id": 6,
+      "name": "Rock This"
+    },
+    {
+      "id": 7,
+      "name": "All Time Classic Hits "
+    },
+    {
+      "id": 8,
+      "name": "Beast Mode "
+    },
+    {
+      "id": 9,
+      "name": "Rock Hard"
+    },
+    {
+      "id": 10,
+      "name": "This Is Nirvana"
+    },
+    {
+      "id": 11,
+      "name": "Alternative Beats"
+    },
+    {
+      "id": 12,
+      "name": "Brain Food"
+    }
+  ],
+  "description": "Time to put on your best dancing shoes - the jukebox is on!",
+  "name": "Rock & Roll Summer",
+  "owner": {
+    "display_name": "Spotify"
+  },
+  "tracks": {
+    "items": [
+      {
+        "track": {
+          "album": {
+            "artists": [
+              {
+                "name": "The Beatles"
+              }
+            ],
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b273e3e3b64cea45265469d4cafa"
+              }
+            ],
+            "name": "Help! (Remastered)"
+          },
+          "artists": [
+            {
+              "name": "The Beatles"
+            }
+          ],
+          "name": "Help! - Remastered 2009",
+          "preview_url": "https://p.scdn.co/mp3-preview/7e1b66ed051e286477a9b0b781412f296c973aed?cid=3592cd3a21bc406e8e6686476a3596b1"
+        }
+      },
+      {
+        "track": {
+          "album": {
+            "artists": [
+              {
+                "name": "Jive Bunny and the Mastermixers"
+              }
+            ],
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b273ef5f2fdfe8678924e35acad4"
+              }
+            ],
+            "name": "Jive Bunny And The Mastermixers The Biggest Party On The Planet"
+          },
+          "artists": [
+            {
+              "name": "Jive Bunny and the Mastermixers"
+            }
+          ],
+          "name": "Swing The Mood",
+          "preview_url": "https://p.scdn.co/mp3-preview/2658f04ad9fd4c77a1506ff3fb83dcb6525d1c01?cid=3592cd3a21bc406e8e6686476a3596b1"
+        }
+      },
+      {
+        "track": {
+          "album": {
+            "artists": [
+              {
+                "name": "Creedence Clearwater Revival"
+              }
+            ],
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b2739f39192f9f8ca1c90847b3e5"
+              }
+            ],
+            "name": "Willy And The Poor Boys"
+          },
+          "artists": [
+            {
+              "name": "Creedence Clearwater Revival"
+            }
+          ],
+          "name": "Fortunate Son",
+          "preview_url": "https://p.scdn.co/mp3-preview/3136857b0f683af80257d8641b8e2680ddd8f2ce?cid=3592cd3a21bc406e8e6686476a3596b1"
+        }
+      },
+      {
+        "track": {
+          "album": {
+            "artists": [
+              {
+                "name": "The Beach Boys"
+              }
+            ],
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b2737cb33b8fab5302942e6a78fb"
+              }
+            ],
+            "name": "Surfin' USA (Remastered)"
+          },
+          "artists": [
+            {
+              "name": "The Beach Boys"
+            }
+          ],
+          "name": "Surfin' U.S.A. - Remastered",
+          "preview_url": "https://p.scdn.co/mp3-preview/5a8fe0d7b177c82a1ee23e396062d931902a0e23?cid=3592cd3a21bc406e8e6686476a3596b1"
+        }
+      },
+      {
+        "track": {
+          "album": {
+            "artists": [
+              {
+                "name": "Led Zeppelin"
+              }
+            ],
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b273fc4f17340773c6c3579fea0d"
+              }
+            ],
+            "name": "Led Zeppelin II (1994 Remaster)"
+          },
+          "artists": [
+            {
+              "name": "Led Zeppelin"
+            }
+          ],
+          "name": "Whole Lotta Love - 1990 Remaster",
+          "preview_url": "https://p.scdn.co/mp3-preview/ce11b19a4d2de9976d7626df0717d0073863909c?cid=3592cd3a21bc406e8e6686476a3596b1"
+        }
+      },
+      {
+        "track": {
+          "album": {
+            "artists": [
+              {
+                "name": "Bill Haley & His Comets"
+              }
+            ],
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b2739060a2c0a01366ee03274597",
+                "width": 640
+              }
+            ],
+            "name": "Rock Around The Clock"
+          },
+          "artists": [
+            {
+              "name": "Bill Haley & His Comets"
+            }
+          ],
+          "name": "(We're Gonna) Rock Around The Clock",
+          "preview_url": "https://p.scdn.co/mp3-preview/ae4bccfe5009c53c6183cdcaaab1673dc28f5517?cid=3592cd3a21bc406e8e6686476a3596b1"
+        }
+      },
+      {
+        "track": {
+          "album": {
+            "artists": [
+              {
+                "name": "Elvis Presley"
+              }
+            ],
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b27320ee3e86e17f17239bef1f76"
+              }
+            ],
+            "name": "Elvis' Golden Records"
+          },
+          "artists": [
+            {
+              "name": "Elvis Presley"
+            }
+          ],
+          "name": "Hound Dog",
+          "preview_url": "https://p.scdn.co/mp3-preview/f683997c027a50649aa3b6c627cd67bd1a9364f5?cid=3592cd3a21bc406e8e6686476a3596b1"
+        }
+      }
+    ],
+    "total": 7
+  }
+}

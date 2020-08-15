@@ -4,8 +4,8 @@ import { useDataLayerValue } from '../../../../DataLayer'
 import { useAudioLayerValue } from '../../../../AudioLayer'
 
 function SongRow({ track, position }) {
-	const [{ currentPlaylist }, dispatch] = useDataLayerValue()
-	const [{ playing, volume, repeat }, audioDispatch] = useAudioLayerValue()
+	const [{ demo }, dispatch] = useDataLayerValue()
+	const [{}, audioDispatch] = useAudioLayerValue()
 
 	const changeTrack = (track) => {
 		let audio = new Audio(track.preview_url)
@@ -45,20 +45,39 @@ function SongRow({ track, position }) {
 	}
 
 	return (
-		<div className="songRow" onClick={() => changeTrack(track)}>
-			<img
-				className="songRowAlbum"
-				src={track.album.images[0].url}
-				alt={track.name}
-			/>
-			<div className="songRowInfo">
-				<h1>{track.name}</h1>
-				<p>
-					{track.artists.map((artist) => artist.name).join(', ')} -{' '}
-					{track.album.name}
-				</p>
-			</div>
-		</div>
+		<>
+			{demo ? (
+				<div className="songRow">
+					<img
+						className="songRowAlbum"
+						src={track.album.images[0].url}
+						alt={track.name}
+					/>
+					<div className="songRowInfo">
+						<h1>{track.name}</h1>
+						<p>
+							{track.artists.map((artist) => artist.name).join(', ')} -{' '}
+							{track.album.name}
+						</p>
+					</div>
+				</div>
+			) : (
+				<div className="songRow" onClick={() => changeTrack(track)}>
+					<img
+						className="songRowAlbum"
+						src={track.album.images[0].url}
+						alt={track.name}
+					/>
+					<div className="songRowInfo">
+						<h1>{track.name}</h1>
+						<p>
+							{track.artists.map((artist) => artist.name).join(', ')} -{' '}
+							{track.album.name}
+						</p>
+					</div>
+				</div>
+			)}
+		</>
 	)
 }
 

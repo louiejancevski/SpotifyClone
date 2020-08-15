@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import './Footer.css'
 import PlayCircleOutlineIcon from '@material-ui/icons/PlayCircleOutline'
 import SkipPreviousIcon from '@material-ui/icons/SkipPrevious'
@@ -15,9 +15,9 @@ import PauseCircleOutlineIcon from '@material-ui/icons/PauseCircleOutline'
 import NoSong from '../../../Images/nosong.png'
 
 function Footer({ spotify }) {
-	const [{ track, currentPlaylist }, dispatch] = useDataLayerValue()
+	const [{ track, currentPlaylist, demo }, dispatch] = useDataLayerValue()
 	const [
-		{ audio, volume, playing, beforeMute, positionInPlaylist },
+		{ volume, playing, beforeMute, positionInPlaylist },
 		audioDispatch,
 	] = useAudioLayerValue()
 
@@ -131,88 +131,128 @@ function Footer({ spotify }) {
 	}
 
 	return (
-		<div className="footer">
-			<div className="footerLeft">
-				{track ? (
-					<>
-						<img
-							className="footerAlbumLogo"
-							alt="Album"
-							src={track.album.images[0].url}
-						/>
+		<>
+			<div className="footer">
+				<div className="footerLeft">
+					{track ? (
+						<>
+							<img
+								className="footerAlbumLogo"
+								alt="Album"
+								src={track.album.images[0].url}
+							/>
 
-						<div className="footerSongInfo">
-							<h4>{track?.name}</h4>
-							<p>{track?.artists?.map((artist) => artist.name).join(', ')}</p>
+							<div className="footerSongInfo">
+								<h4>{track?.name}</h4>
+								<p>{track?.artists?.map((artist) => artist.name).join(', ')}</p>
+							</div>
+						</>
+					) : (
+						<>
+							<img
+								className="footerAlbumLogo"
+								alt="No song is playing"
+								src={NoSong}
+							/>
+
+							<div className="footerSongInfo">
+								<h4>No song is playing</h4>
+								<p>...</p>
+							</div>
+						</>
+					)}
+				</div>
+				{demo ? (
+					<>
+						<div className="footerCenter">
+							<ShuffleIcon className="footerGreen" />
+							<SkipPreviousIcon />
+							<PlayCircleOutlineIcon fontSize="large" className="footerIcon" />
+							<SkipNextIcon />
+							<RepeatIcon className="footerGreen" />
+						</div>
+						<div className="footerRight">
+							<Grid container spacing={2}>
+								<Grid item>
+									<PlaylistPlayIcon />
+								</Grid>
+								<Grid item>
+									{volume > 0 ? <VolumeUpIcon /> : <VolumeOffIcon />}
+								</Grid>
+								<Grid item xs>
+									<Slider
+										defaultValue={100}
+										min={0}
+										max={100}
+										onChange={(event, value) => handleVolumeChange(value)}
+										aria-labelledby="continuous-slider"
+										valueLabelDisplay="off"
+									/>
+								</Grid>
+							</Grid>
 						</div>
 					</>
 				) : (
 					<>
-						<img
-							className="footerAlbumLogo"
-							alt="No song is playing"
-							src={NoSong}
-						/>
-
-						<div className="footerSongInfo">
-							<h4>No song is playing</h4>
-							<p>...</p>
+						<div className="footerCenter">
+							<ShuffleIcon className="footerGreen" />
+							{positionInPlaylist > 0 ? (
+								<SkipPreviousIcon
+									onClick={handlePrevious}
+									className="footerIcon"
+								/>
+							) : (
+								<SkipPreviousIcon />
+							)}
+							{playing ? (
+								<PauseCircleOutlineIcon
+									onClick={handlePlayPause}
+									fontSize="large"
+									className="footerIcon"
+								/>
+							) : (
+								<PlayCircleOutlineIcon
+									onClick={handlePlayPause}
+									fontSize="large"
+									className="footerIcon"
+								/>
+							)}
+							{positionInPlaylist !==
+							currentPlaylist?.tracks.items.length - 1 ? (
+								<SkipNextIcon onClick={handleNext} className="footerIcon" />
+							) : (
+								<SkipNextIcon />
+							)}
+							<RepeatIcon className="footerGreen" />
+						</div>
+						<div className="footerRight">
+							<Grid container spacing={2}>
+								<Grid item>
+									<PlaylistPlayIcon />
+								</Grid>
+								<Grid item>
+									{volume > 0 ? (
+										<VolumeUpIcon onClick={handleMute} />
+									) : (
+										<VolumeOffIcon onClick={handleMute} />
+									)}
+								</Grid>
+								<Grid item xs>
+									<Slider
+										defaultValue={100}
+										min={0}
+										max={100}
+										onChange={(event, value) => handleVolumeChange(value)}
+										aria-labelledby="continuous-slider"
+										valueLabelDisplay="off"
+									/>
+								</Grid>
+							</Grid>
 						</div>
 					</>
 				)}
 			</div>
-			<div className="footerCenter">
-				<ShuffleIcon className="footerGreen" />
-				{positionInPlaylist > 0 ? (
-					<SkipPreviousIcon onClick={handlePrevious} className="footerIcon" />
-				) : (
-					<SkipPreviousIcon />
-				)}
-				{playing ? (
-					<PauseCircleOutlineIcon
-						onClick={handlePlayPause}
-						fontSize="large"
-						className="footerIcon"
-					/>
-				) : (
-					<PlayCircleOutlineIcon
-						onClick={handlePlayPause}
-						fontSize="large"
-						className="footerIcon"
-					/>
-				)}
-				{positionInPlaylist != currentPlaylist?.tracks.items.length - 1 ? (
-					<SkipNextIcon onClick={handleNext} className="footerIcon" />
-				) : (
-					<SkipNextIcon />
-				)}
-				<RepeatIcon className="footerGreen" />
-			</div>
-			<div className="footerRight">
-				<Grid container spacing={2}>
-					<Grid item>
-						<PlaylistPlayIcon />
-					</Grid>
-					<Grid item>
-						{volume > 0 ? (
-							<VolumeUpIcon onClick={handleMute} />
-						) : (
-							<VolumeOffIcon onClick={handleMute} />
-						)}
-					</Grid>
-					<Grid item xs>
-						<Slider
-							defaultValue={100}
-							min={0}
-							max={100}
-							onChange={(event, value) => handleVolumeChange(value)}
-							aria-labelledby="continuous-slider"
-							valueLabelDisplay="off"
-						/>
-					</Grid>
-				</Grid>
-			</div>
-		</div>
+		</>
 	)
 }
 

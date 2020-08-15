@@ -1,5 +1,7 @@
 .login {
 	display: grid;
+	text-align: center;
+	align-items: center;
 	place-items: center;
 	height: 100vh;
 	background-image: linear-gradient(#2c5e92 0%, #552f6d 80%);
@@ -10,7 +12,7 @@
 	color: #fff;
 }
 
-.login a {
+.login a:first-of-type {
 	font-size: 14px;
 	padding: 15px;
 	border-radius: 99px;
@@ -18,4 +20,14 @@
 	color: #54306e;
 	font-weight: 600;
 	text-decoration: none;
+}
+
+.login div {
+	text-decoration: none;
+	display: block;
+	margin-top: 60px;
+	font-size: 12px;
+	letter-spacing: 0.7px;
+	color: #ffffff;
+	cursor: pointer;
 }

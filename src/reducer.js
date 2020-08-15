@@ -5,10 +5,16 @@ export const initialState = {
 	currentPlaylist: null,
 	track: null,
 	token: null,
+	demo: false,
 }
 
 const reducer = (state, action) => {
 	switch (action.type) {
+		case 'SET_DEMO':
+			return {
+				...state,
+				demo: action.demo,
+			}
 		case 'SET_USER':
 			return {
 				...state,
