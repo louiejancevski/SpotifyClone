@@ -1,17 +1,18 @@
 {
   "files": {
-    "main.css": "/SpotifyClone/static/css/main.0be8f9b1.chunk.css",
-    "main.js": "/SpotifyClone/static/js/main.e8bf11c4.chunk.js",
-    "main.js.map": "/SpotifyClone/static/js/main.e8bf11c4.chunk.js.map",
+    "main.css": "/SpotifyClone/static/css/main.bca2ccaf.chunk.css",
+    "main.js": "/SpotifyClone/static/js/main.fc013ca3.chunk.js",
+    "main.js.map": "/SpotifyClone/static/js/main.fc013ca3.chunk.js.map",
     "runtime-main.js": "/SpotifyClone/static/js/runtime-main.69733eb2.js",
     "runtime-main.js.map": "/SpotifyClone/static/js/runtime-main.69733eb2.js.map",
-    "static/js/2.a98c42c0.chunk.js": "/SpotifyClone/static/js/2.a98c42c0.chunk.js",
-    "static/js/2.a98c42c0.chunk.js.map": "/SpotifyClone/static/js/2.a98c42c0.chunk.js.map",
+    "static/js/2.506f1fca.chunk.js": "/SpotifyClone/static/js/2.506f1fca.chunk.js",
+    "static/js/2.506f1fca.chunk.js.map": "/SpotifyClone/static/js/2.506f1fca.chunk.js.map",
     "index.html": "/SpotifyClone/index.html",
-    "precache-manifest.3216d37b22072d99a3fb53922b444a94.js": "/SpotifyClone/precache-manifest.3216d37b22072d99a3fb53922b444a94.js",
+    "precache-manifest.41c2d02c0757d2c2f71d407b25edf457.js": "/SpotifyClone/precache-manifest.41c2d02c0757d2c2f71d407b25edf457.js",
     "service-worker.js": "/SpotifyClone/service-worker.js",
-    "static/css/main.0be8f9b1.chunk.css.map": "/SpotifyClone/static/css/main.0be8f9b1.chunk.css.map",
-    "static/js/2.a98c42c0.chunk.js.LICENSE.txt": "/SpotifyClone/static/js/2.a98c42c0.chunk.js.LICENSE.txt",
+    "static/css/main.bca2ccaf.chunk.css.map": "/SpotifyClone/static/css/main.bca2ccaf.chunk.css.map",
+    "static/js/2.506f1fca.chunk.js.LICENSE.txt": "/SpotifyClone/static/js/2.506f1fca.chunk.js.LICENSE.txt",
+    "static/media/demo-playlist.jpg": "/SpotifyClone/static/media/demo-playlist.afb22e1a.jpg",
     "static/media/home.b9a2ee83.svg": "/SpotifyClone/static/media/home.b9a2ee83.svg",
     "static/media/library.0cdf3118.svg": "/SpotifyClone/static/media/library.0cdf3118.svg",
     "static/media/logo.cf21b45c.svg": "/SpotifyClone/static/media/logo.cf21b45c.svg",
@@ -20,8 +21,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.69733eb2.js",
-    "static/js/2.a98c42c0.chunk.js",
-    "static/css/main.0be8f9b1.chunk.css",
-    "static/js/main.e8bf11c4.chunk.js"
+    "static/js/2.506f1fca.chunk.js",
+    "static/css/main.bca2ccaf.chunk.css",
+    "static/js/main.fc013ca3.chunk.js"
   ]
 }
