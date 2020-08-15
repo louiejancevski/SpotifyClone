@@ -28,7 +28,11 @@
 
 .footerSongInfo h4 {
 	font-size: 13px;
-	letter-spacing: 0.015em;
+	letter-spacing: 0.9px;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+	max-width: 165px;
 }
 
 .footerSongInfo p {
@@ -36,6 +40,10 @@
 	color: #b3b3b3;
 	letter-spacing: 1px;
 	font-weight: 600;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+	max-width: 165px;
 }
 
 .footerIcon:hover,

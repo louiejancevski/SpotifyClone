@@ -32,6 +32,10 @@
 
 .bodyInfoText h2 {
 	font-size: 84px;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+	max-width: 980px;
 }
 
 @media (max-width: 1023px) {
@@ -111,4 +115,9 @@
 	font-size: 14px;
 	line-height: 33px;
 	letter-spacing: 0.015em;
+}
+
+.bodyInfoText .songs:before {
+	content: '•';
+	margin: 0px 4px;
 }

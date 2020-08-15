@@ -1,7 +1,7 @@
-import React from "react"
-import "./Login.css"
-import { loginURL } from "../Config/spotify"
-import { ReactComponent as Logo } from "../Logo/logo.svg"
+import React from 'react'
+import './Login.css'
+import { loginURL } from '../../Config/spotify'
+import { ReactComponent as Logo } from '../../Logo/logo.svg'
 
 function Login() {
 	return (
