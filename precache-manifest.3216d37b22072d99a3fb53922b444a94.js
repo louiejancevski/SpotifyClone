@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "6e90e9228d27b113daf9e620194f5008",
+    "revision": "2dba4389f2e7f0d66962c162ea7db020",
     "url": "/SpotifyClone/index.html"
   },
   {
-    "revision": "76bf2609eb64a12417aa",
-    "url": "/SpotifyClone/static/css/main.009d8f11.chunk.css"
+    "revision": "10153f50d5a6320378ac",
+    "url": "/SpotifyClone/static/css/main.0be8f9b1.chunk.css"
   },
   {
-    "revision": "c719ab4ed7dd7d26fd82",
-    "url": "/SpotifyClone/static/js/2.c87e87c5.chunk.js"
+    "revision": "07770443adf5f1b01411",
+    "url": "/SpotifyClone/static/js/2.a98c42c0.chunk.js"
   },
   {
     "revision": "0749163b59fbee32225059cb60c18af6",
-    "url": "/SpotifyClone/static/js/2.c87e87c5.chunk.js.LICENSE.txt"
+    "url": "/SpotifyClone/static/js/2.a98c42c0.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "76bf2609eb64a12417aa",
-    "url": "/SpotifyClone/static/js/main.1382b4b5.chunk.js"
+    "revision": "10153f50d5a6320378ac",
+    "url": "/SpotifyClone/static/js/main.e8bf11c4.chunk.js"
   },
   {
     "revision": "b8ef8ac4ca1e886c5ad0",
@@ -34,6 +34,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "cf21b45c896e5d27f244a0be9aeba623",
     "url": "/SpotifyClone/static/media/logo.cf21b45c.svg"
+  },
+  {
+    "revision": "5bec38e23bfac4fb89e2d7b97578d901",
+    "url": "/SpotifyClone/static/media/noPlaylistImage.5bec38e2.png"
   },
   {
     "revision": "0f6375428d8f094acc24d7e67c4ebcc1",
