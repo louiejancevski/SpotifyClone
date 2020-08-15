@@ -1,4 +1,4 @@
-## Spotify Clone 🟢
+## 🟢 Spotify Clone 
 - Built using ReactJS and the Spotify API.
 - User authentication.
 - Audio controls 
