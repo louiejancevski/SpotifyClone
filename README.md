@@ -60,7 +60,7 @@ For each song that is being played, the `document.title` will also get dynamical
 
 ![Document title](https://github.com/louiejancevski/SpotifyClone/blob/master/src/Images/document-title.png)
 
-**Note:** I added a static version as well for people that just want to get a quick glance at the app.
+**Note:** I added a static version as well for people that just want to take a quick glance at the app.
 
 ## Used:
 - [ReactJS](https://reactjs.org/docs/create-a-new-react-app.html)
