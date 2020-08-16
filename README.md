@@ -62,7 +62,7 @@ For each song that is being played, the `document.title` will also get dynamical
 
 **Note:** I added a static version as well for people that just want to take a quick glance at the app.
 
-## Used:
+## Built With:
 - [ReactJS](https://reactjs.org/docs/create-a-new-react-app.html)
 - [Spotify API](https://developer.spotify.com/documentation/web-api/)
 - [Material UI](https://material-ui.com/)
