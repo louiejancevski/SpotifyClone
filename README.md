@@ -56,7 +56,7 @@ I've made it more functional and dynamic now.
 
 You can access any of your playlists and play any of your songs for a max of 30 seconds, change the volume and mute any song, and also skip to the next or previous track. 
 
-For each song that is being played, the `document.title` will also get dynamically changed accordingly.
+For each song that is being played, the `document.title` will also change accordingly.
 
 ![Document title](https://github.com/louiejancevski/SpotifyClone/blob/master/src/Images/document-title.png)
 
