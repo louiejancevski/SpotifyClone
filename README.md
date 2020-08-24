@@ -12,7 +12,7 @@ To use the live demo of this app:
 This project is a ReactJS clone of the Spotify web player.
 
 The main idea is to have users be authenticated through Spotify, and then display them some basic information about their own account.
-
+ 
 Users are able to: 
 - Play or pause a song
 - Skip to the next or previous track
